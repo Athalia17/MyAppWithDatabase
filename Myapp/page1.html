@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+          <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+        <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular-route/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script type="text/javascript" src="app/controller/maincontroller,js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.js"></script>
+    </head>
+    </style>
+
+<script type="text/javascript">
+    /*function passValidate(){
+        var pass = document.getElementById("pass").value;
+        var ConfirmPass = document.getElementById("ConfirmPass").value;
+       if(pass != ConfirmPass){
+        alert("Passwords Do not match");
+        return false;
+       } 
+       else{
+        return true;
+       }
+    }*/
+  
+</script>
+    <body id="page">
+
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span><div><h3>Lets You Watch</h3></div></li>
+            <li><span>Image 02</span><div><h3>your favorite korean</h3></div></li>
+            <li><span>Image 03</span><div><h3>Drama's for Free.</h3></div></li>
+            <li><span>Image 04</span><div><h3>So </h3></div></li>
+            <li><span>Image 05</span><div><h3>sign-in </h3></div></li>
+            <li><span>Image 06</span><div><h3>and Enjoy!!!</h3></div></li>
+        </ul>
+        <div class="container">
+            <header>
+                <h1>KDrama</h1>
+                <h2>KDrama</h2>
+				<p class="codrops-demos">
+					<a href="#login_form" id="login_pop">Login</a>
+					<a href="#join_form" id="join_pop">Sign Up</a>	
+				</p>
+            </header>
+
+        </div>
+         <a href="#x" class="overlay" id="join_form"></a>
+        <div class="popup">
+                                                                <!-- para sa controller nako dai -->
+        <div ng-app="myapp" ng-controller="empcontroller" >
+         <div id="header">
+         
+                <h1>KDrama</h1>
+            </div>
+            <h2>Sign Up</h2>
+            <p>Please enter your details here</p>
+        <form name="Signup" action="#login_form">
+            <aside> 
+            <ul>
+             <b>Email<br></b>
+                <input name="email" type="email"  id="email" ng-model="formData.email"  /><br>
+                <span ng-show="Signup.email.$error.required && Signup.email.$dirty">required</span>
+                <span ng-show="!Signup.email.$error.required && Signup.email.$error.email && Signup.email.$dirty">invalid email</span><br>
+            <b>UserName<br></b>
+                 <input type="text" id="username" name="username" ng-model="formData.username" ng-minlength="5" ng-maxlength="20" ng-pattern="/^[A-z][A-z0-9]*$/" required  />
+                <br><span ng-show="Signup.username.$error.required && Signup.username.$dirty">required</span>
+                <span ng-show="!Signup.username.$error.minLength && !Signup.username.$error.maxLength && Signup.username.$error.pattern && Signup.username.$dirty">Must start with a letter, and contain letters &amp; numbers only.</span>
+                <span ng-show="!Signup.username.$error.required && (Signup.username.$error.minlength || Signup.username.$error.maxlength) && Signup.username.$dirty">Username ust be between 5 and 20 characters.</span><br>
+            <b>Password<br></b>
+                <input name="password" type="password" required id="password" ng-model="formData.password" ng-minlength="8" ng-maxlength="20" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required /><br>
+                <br><span ng-show="Signup.password.$error.required && Signup.password.$dirty">required</span>
+                <span ng-show="!Signup.password.$error.required && (Signup.password.$error.minlength || Signup.password.$error.maxlength) && Signup.password.$dirty">Passwords must be between 8 and 20 characters.</span>
+                <span ng-show="!Signup.password.$error.required && !Signup.password.$error.minlength && !Signup.password.$error.maxlength && Signup.password.$error.pattern && Signup.password.$dirty">Must contain one lower <br> uppercase letter<br> and one non-alpha character (a number or a symbol.)</span><br>
+            </ul>
+            <br>
+            <!--  <button type="submit" class="btn" ng-disabled="!Signup.$valid">Submit</button> -->
+            <input type="submit" value="Sign Up" ng-click="insertdata()" ng-disabled="!Signup.$valid"/>  
+             </form>
+             </div>
+             </aside>
+            <a class="close" href="#close"></a>
+<br><br>
+<div id ="footer">
+Copyright tatals.Kdrama.com</div>
+
+ </div>
+    <a href="#x" class="overlay" id="login_form"></a>
+        <div class="popup">
+        <div ng-app="single-page-app" ng-controller="cfgController">
+            <div id="header">
+                <h1>KDrama</h1>
+            </div>
+            <h2>Welcome Guest!</h2>
+            <form name="sign">
+                 <ul>
+                      Username <br>
+                <input name="username" type="email" id="login" required /><br>
+                 <br> Password<br>
+                <input name="password" type="password" id="password" required/>
+                </ul>
+       
+                <br> 
+                <a href="#SignPage" id="submit">submit</a><!-- 
+                <input type="submit" value="Log In"/> -->
+                </div>
+                </form>
+                <a class="close" href="#close"></a>
+                <br>
+<div id ="footer">
+Copyright tatals.Kdrama.com
+</div>
+<div id="main">
+        <div ng-view></div>
+    </div>
+    </body>
+</html>

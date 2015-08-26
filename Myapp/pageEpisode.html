@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+    <head>
+          <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+        <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+    </head>
+
+    <script type="text/javascript">
+function getwords() {
+  text = words.value;
+  document.getElementById("subs").innerHTML += '<p>'+text
+  document.getElementById("words").value = " "
+}
+</script>
+    <body>
+    
+        <div class="container">
+            <header>
+                <h1>KDrama</h1>
+                <h2>KDrama</h2>
+                <p class="codrops-demos">
+                    <a href="#join_form" id="Ost">OST</a>
+                    <a href="SignPage.html" id="back">Back</a>
+                </p>
+                <h1>A Gentleman's Degnity</h1>
+                <a href="#ep1" id="ep1">episode 1</a>&nbsp;&nbsp;&nbsp;
+                <a href="#ep2" id="ep2">Next</a>&nbsp;&nbsp;&nbsp;
+              
+        </header>
+        </div>
+         <div align="center" class="ep">
+        <a href="#x" id ="ep1">
+       
+        <center>
+<video width="500" height="300" controls>
+  <source src="videos\episode1.mp4" type="video/mp4">
+</video>
+</center>
+       </div>
+        <br>
+    <form >
+        <div id="Comment" align="Center" onclick="getwords()">
+        <textarea id="words" rows="3" cols="10"> </textarea><br>
+        <input type="button"  value="Submit" /> <br>
+          Comments<p id="subs"></p>
+       
+    </form>
+    </div>
+
+
+       
+        
+        </div>
+</body>
